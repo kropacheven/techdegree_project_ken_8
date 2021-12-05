@@ -32,3 +32,12 @@ body {
 .hidden {
     display: none;
 }
+
+img {
+    border-radius: 50%;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+}
