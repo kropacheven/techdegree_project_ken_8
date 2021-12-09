@@ -15,7 +15,7 @@ fetch(urlAPI)
 .catch(err => console.log(err))
 
 
-/*
+
 function displayEmployees(employeeData) {
     employees = employeeData;
     // store the employee HTML as we create it
@@ -39,4 +39,6 @@ function displayEmployees(employeeData) {
     `
 });
 
-*/
+gridContainer.innerHTML = employeeHTML;
+Techdegree
+}
