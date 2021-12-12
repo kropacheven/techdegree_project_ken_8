@@ -50,3 +50,8 @@ img {
     flex-wrap: wrap;
     grid-gap: 10px;
 }
+
+.card {
+    display: flex;
+    gap: 15px;
+}
