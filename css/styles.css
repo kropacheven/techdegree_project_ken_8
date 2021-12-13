@@ -35,6 +35,11 @@ body {
 
 /* General styling*/
 
+p {
+    color: rgba(148, 143, 143, 0.61);
+    font-size: 0.9rem;
+}
+
 img {
     border-radius: 50%;
 }
