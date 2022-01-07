@@ -33,6 +33,32 @@ body {
     display: none;
 }
 
+.switch-forth,
+.switch-back {
+    background-color:rgba(32,33,36,0.2);
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+    top: 100px;
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.switch-back {
+    left: 15px;
+}
+.switch-forth {
+    right: 15px;
+}
+.switch-back:hover,
+.switch-forth:hover {
+    color: rgb(13, 66, 209);
+    background-color:white;
+}
+
 /* General styling*/
 
 p {
@@ -45,7 +71,24 @@ h3 {
     font-family: 'Lato', sans-serif;
     font-size: 1.1rem;;
     padding-left: 10px;
-    margin-bottom: 7px;
+}
+
+#search {
+    width: 40%;
+    height: 30px;
+    border: 2px solid lightgrey;
+    margin: 5px; 
+    font-size: 13px;
+}
+
+.head-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-2 {
+    margin-right: auto;
 }
 
 img {
@@ -62,10 +105,10 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
-    height: 100vh;
 }
 
 .card {
     display: flex;
     gap: 15px;
 }
+

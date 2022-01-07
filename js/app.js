@@ -5,6 +5,8 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
+const switchForth = document.querySelector(".switch-forth");
+const switchBack = document.querySelector(".switch-back");
 
 // fetch data from API
 fetch(urlAPI)
@@ -15,7 +17,7 @@ fetch(urlAPI)
     .catch(err => console.log(err))
 
 
-
+// Display employee function:
 function displayEmployees(employeeData) {
     employees = employeeData;
     // store the employee HTML as we create it
@@ -42,7 +44,7 @@ function displayEmployees(employeeData) {
 gridContainer.innerHTML = employeeHTML;
 }
 
-
+// Display modal window function:
 function displayModal(index) {
     // use object destructuring make our template literal cleaner
     let { name, dob, phone, email, location: { city, street, state, postcode
@@ -65,7 +67,7 @@ function displayModal(index) {
     modalContainer.innerHTML = modalHTML;
 }
 
-
+// Event listenet for gridContainer:
 gridContainer.addEventListener('click', e => {
     // make sure the click is not on the gridContainer itself
     if (e.target !== gridContainer) {
@@ -78,4 +80,54 @@ gridContainer.addEventListener('click', e => {
 
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
+});
+
+
+//--------------------------------------- EXTRA -----------------------------------------//
+
+//  1. SearchFilter Function:
+function searchFilter(e) {
+    let searchName = e.target.value.toLowerCase();
+    let employeeNames = document.querySelectorAll(".name");
+
+    employeeNames.forEach(employeeName => {
+         let name = employeeName.textContent.toLowerCase();
+         let nameOfEmployee = employeeName.parentElement.parentElement;
+
+      if(name.includes(searchName)){
+        nameOfEmployee.style.display = "";
+      } else {
+        nameOfEmployee.style.display = "none";
+      }
+    });
+}
+
+search.addEventListener('input', searchFilter);
+
+// 2. Function to switch back and forth between employees in modal view:
+
+let indexOfModal = 0;
+
+switchForth.addEventListener('click', () => {
+    if (indexOfModal !== employees.length-1) {
+     indexOfModal++;
+     displayModal(indexOfModal);
+    } else {
+     indexOfModal = 0;
+    displayModal(indexOfModal);
+    }
+});
+
+switchBack.addEventListener('click', () => {
+    
+  if (indexOfModal !== 0) {
+    indexOfModal--;
+    displayModal(indexOfModal); 
+  
+  } else {
+    indexOfModal =11;
+    displayModal(indexOfModal);
+   
+  }
+
 });
