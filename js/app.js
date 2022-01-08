@@ -123,11 +123,8 @@ switchBack.addEventListener('click', () => {
   if (indexOfModal !== 0) {
     indexOfModal--;
     displayModal(indexOfModal); 
-  
   } else {
-    indexOfModal =11;
+    indexOfModal = 11;
     displayModal(indexOfModal);
-   
   }
-
 });

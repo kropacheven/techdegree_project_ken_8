@@ -35,16 +35,16 @@ body {
 
 .switch-forth,
 .switch-back {
-    background-color:rgba(32,33,36,0.2);
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: lightgray;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: lighter;
     color: white;
     top: 100px;
-    position: absolute;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
 }
 
 .switch-back {
@@ -55,7 +55,7 @@ body {
 }
 .switch-back:hover,
 .switch-forth:hover {
-    color: rgb(13, 66, 209);
+    color: black;
     background-color:white;
 }
 
