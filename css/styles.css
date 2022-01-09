@@ -48,10 +48,10 @@ body {
 }
 
 .switch-back {
-    left: 15px;
+    left: 20px;
 }
 .switch-forth {
-    right: 15px;
+    right: 20px;
 }
 .switch-back:hover,
 .switch-forth:hover {
