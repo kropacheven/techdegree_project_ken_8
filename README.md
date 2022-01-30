@@ -1,2 +1,3 @@
 # techdegree_project_ken_8
- techdegree8
+See the project online: https://kropacheven.github.io/techdegree_project_ken_8/
+
